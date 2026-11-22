@@ -559,3 +559,17 @@ tr:last-child td { border-bottom: 0; }
 .hero-org { display: flex; align-items: center; gap: 1rem; }
 .hero-org img { width: clamp(64px, 7vw, 92px); height: auto; flex: none; }
 .hero-org strong { font: 700 clamp(1.05rem, 1.7vw, 1.4rem)/1.2 var(--font-head); letter-spacing: -.01em; color: var(--green-700); max-width: 22ch; }
+
+/* About us, team, values, text news ------------------------------------------- */
+.value-item { padding: 1.5rem 0; border-top: 1px solid var(--line); }
+.value-item h3 { margin: .25rem 0 .4rem; }
+.value-item p { margin: 0; color: var(--ink-soft); }
+.value-n { font: 700 .9rem var(--font-head); color: var(--gold-deep); letter-spacing: .08em; }
+.team-card { text-align: center; }
+.team-card img { width: clamp(140px, 60%, 220px); aspect-ratio: 1; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 1rem; box-shadow: var(--shadow-1); }
+.team-card h3 { margin: 0 0 .25rem; font-size: 1.15rem; }
+.team-card p { margin: 0; color: var(--ink-soft); }
+.mag-side-item .row--text { display: block; padding-block: .9rem; }
+
+.policy--solo { grid-template-columns: 1fr; }
+.policy--solo .stack { max-width: 62ch; }
