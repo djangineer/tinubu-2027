@@ -1,0 +1,27 @@
+/* Motion is used sparingly: one hero entrance, reveal-on-scroll for long pages,
+   and responses to user action (menus, accordions, dialogs). */
+
+@keyframes hero-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes band-in { from { clip-path: inset(100% 0 0 0); } to { clip-path: inset(0); } }
+@keyframes dlg-in { from { opacity: 0; transform: translateY(14px) scale(.98); } to { opacity: 1; transform: none; } }
+
+.hero-copy > * { animation: hero-in .7s var(--ease) both; }
+.hero-copy > *:nth-child(2) { animation-delay: .08s; }
+.hero-copy > *:nth-child(3) { animation-delay: .16s; }
+.hero-copy > *:nth-child(4) { animation-delay: .24s; }
+.hero-copy > *:nth-child(5) { animation-delay: .32s; }
+.hero-visual { animation: hero-in .9s var(--ease) .1s both; }
+
+/* Scroll reveal: only applied when JS has marked the page */
+.js .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s var(--ease), transform .6s var(--ease); }
+.js .reveal.is-in { opacity: 1; transform: none; }
+
+dialog[open] { animation: dlg-in .25s var(--ease); }
+.cookie { animation: hero-in .4s var(--ease) both; }
+
+.meter i { transition: width 1s var(--ease); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; animation-delay: 0s !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
