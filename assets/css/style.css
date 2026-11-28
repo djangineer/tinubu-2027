@@ -573,3 +573,8 @@ tr:last-child td { border-bottom: 0; }
 
 .policy--solo { grid-template-columns: 1fr; }
 .policy--solo .stack { max-width: 62ch; }
+
+.footer-social { display: flex; gap: .6rem; list-style: none; padding: 0; margin: 1.1rem 0 0; }
+.footer-social a { display: grid; place-items: center; width: 2.5rem; height: 2.5rem; border: 1px solid rgba(255,255,255,.4); border-radius: 50%; color: #fff; transition: background .2s, color .2s, border-color .2s; }
+.footer-social a:hover, .footer-social a:focus-visible { background: var(--gold-soft); border-color: var(--gold-soft); color: #1a1a1a; }
+.footer-credit a { color: #fff; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
